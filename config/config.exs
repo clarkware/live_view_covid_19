@@ -7,8 +7,8 @@
 # General application configuration
 use Mix.Config
 
-config :covid_19,
-  ecto_repos: [Covid19.Repo]
+# config :covid_19,
+#   ecto_repos: [Covid19.Repo]
 
 # Configures the endpoint
 config :covid_19, Covid19Web.Endpoint,
