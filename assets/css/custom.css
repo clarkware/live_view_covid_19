@@ -1,0 +1,11 @@
+body {
+  @apply antialiased relative bg-gray-300 font-sans;
+}
+
+.container {
+  @apply max-w-6xl mx-auto px-6;
+}
+
+h1 {
+  @apply text-center text-gray-900 font-extrabold text-4xl mb-8;
+}
