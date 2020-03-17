@@ -9,7 +9,7 @@ defmodule Covid19.Application do
     # List all child processes to be supervised
     children = [
       # Start the Ecto repository
-      Covid19.Repo,
+      # Covid19.Repo,
       # Start the endpoint when the application starts
       Covid19Web.Endpoint
       # Starts a worker by calling: Covid19.Worker.start_link(arg)

@@ -2,10 +2,159 @@ body {
   @apply antialiased relative bg-gray-300 font-sans;
 }
 
-.container {
-  @apply max-w-6xl mx-auto px-6;
+header {
+  @apply h-16;
+
+  p {
+    @apply py-4 text-gray-600 text-sm text-center font-semibold;
+  }
 }
 
-h1 {
-  @apply text-center text-gray-900 font-extrabold text-4xl mb-8;
+footer {
+  @apply h-10;
+}
+
+.container {
+  @apply max-w-5xl mx-auto px-6;
+}
+
+.wrapper {
+  @apply flex flex-col;
+}
+
+a {
+  @apply underline;
+}
+
+form {
+  @apply inline-flex items-center mt-8 mb-8 mx-auto;
+
+  input[type="text"] {
+    @apply h-10 border border-gray-500 border-l-0 rounded-r-md bg-white px-5 text-base w-full;
+  }
+
+  input[type="text"]:focus {
+    @apply outline-none;
+  }
+
+  .icon {
+    @apply h-10 pl-4 py-2 bg-white border border-gray-500 border-r-0 rounded-l-md;
+
+    img {
+      @apply h-5 w-5;
+    }
+  }
+}
+
+.stats {
+  @apply align-middle mb-8 rounded-lg bg-white shadow-md grid grid-cols-3;
+
+  .stat {
+    @apply p-6 text-center;
+
+    h3 {
+      @apply block mt-2 text-lg leading-6 font-medium text-gray-500;
+    }
+
+    span {
+      @apply block text-5xl leading-none font-extrabold text-indigo-600;
+    }
+  }
+}
+
+table {
+  @apply min-w-full text-sm;
+
+  th {
+    @apply bg-transparent px-6 py-4 border-b border-gray-300 bg-indigo-700 text-base leading-4 font-medium uppercase tracking-wider text-right text-white;
+
+    a {
+      @apply no-underline text-white;
+    }
+
+    a:hover {
+      @apply underline;
+    }
+  }
+
+  th.left {
+    @apply text-left;
+  }
+
+  tbody {
+    @apply bg-white;
+  }
+
+  td {
+    @apply text-base px-6 py-4 whitespace-no-wrap leading-5 text-gray-900 border-b border-gray-300 font-medium text-gray-900 text-right;
+  }
+
+  td.left {
+    @apply text-left;
+  }
+}
+
+/*
+ * Loading Spinner
+ *
+ * Copied from:
+ * https://projects.lukehaas.me/css-loaders/
+ */
+
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: load7 1.8s infinite ease-in-out;
+  animation: load7 1.8s infinite ease-in-out;
+}
+.loader {
+  color: #5a67d8;
+  font-size: 10px;
+  margin: 20px auto;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+.loader:before {
+  left: -3.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 3.5em;
+}
+@-webkit-keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+@keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
 }

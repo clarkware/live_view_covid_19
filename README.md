@@ -1,20 +1,27 @@
-# Live View Covid 19
+# Live View of Covid 19 Data
 
-To start your Phoenix server:
+## Installation
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
-  * Install Node.js dependencies with `cd assets && npm install`
-  * Start Phoenix endpoint with `mix phx.server`
+1. Install Elixir dependencies:
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+    ```sh
+    mix deps.get
+    ```
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+2. Create the database:
 
-## Learn more
+    ```sh
+    mix ecto.setup
+    ```
 
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+3. Fire up the Phoenix endpoint:
+
+    ```sh
+    mix phx.server
+    ```
+
+4. Visit [`localhost:4000`](http://localhost:4000/)
+
+## Credits
+
+Data courtesy of [mathdroid](https://github.com/mathdroid/covid-19-api)
