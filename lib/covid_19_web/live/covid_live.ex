@@ -1,6 +1,8 @@
 defmodule Covid19Web.CovidLive do
   use Phoenix.LiveView
 
+  alias Covid19Web.Router.Helpers, as: Routes
+
   @refresh_interval :timer.minutes(60)
 
   def mount(_params, _session, socket) do
@@ -48,7 +50,7 @@ defmodule Covid19Web.CovidLive do
 
       <form phx-change="filter">
         <div class="icon">
-          <img src="images/search.svg">
+          <img src="<%= Routes.static_path(@socket, "/images/search.svg") %>">
         </div>
         <input type="text" name="q" value="<%= @q %>" />
       </form>
