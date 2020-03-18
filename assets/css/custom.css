@@ -30,7 +30,7 @@ form {
   @apply inline-flex items-center mt-8 mb-8 mx-auto;
 
   input[type="text"] {
-    @apply h-10 border border-gray-500 border-l-0 rounded-r-md bg-white px-5 text-base w-full;
+    @apply h-10 border border-gray-500 border-l-0 rounded-r-md bg-white pl-2 text-base w-full;
   }
 
   input[type="text"]:focus {
@@ -41,7 +41,7 @@ form {
     @apply h-10 pl-4 py-2 bg-white border border-gray-500 border-r-0 rounded-l-md;
 
     img {
-      @apply h-5 w-5;
+      @apply h-6 w-6;
     }
   }
 }
