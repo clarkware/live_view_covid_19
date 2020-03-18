@@ -18,6 +18,10 @@ A quick-and-dirty Phoenix LiveView app that fetches the latest stats about COVID
 
 3. Visit [`localhost:4000`](http://localhost:4000/)
 
+## Live Demo
+
+<http://powerful-beautiful-shrike.gigalixirapp.com>
+
 ## Credits
 
 Data courtesy of [mathdroid](https://github.com/mathdroid/covid-19-api)
