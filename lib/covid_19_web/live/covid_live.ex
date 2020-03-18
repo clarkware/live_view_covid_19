@@ -50,7 +50,7 @@ defmodule Covid19Web.CovidLive do
 
       <form phx-change="filter">
         <div class="icon">
-          <img src="/images/search.svg" />
+          <img src="<%= Routes.static_path(@socket, "/images/search.svg") %>">
         </div>
         <input type="text" name="q" value="<%= @q %>" />
       </form>
