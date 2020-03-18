@@ -100,14 +100,10 @@ defmodule Covid19Web.CovidLive do
   end
 
   def handle_info(:fetch, socket) do
-    global_stats = fetch(~c"https://covid19.mathdro.id/api")
-
-    regional_stats = fetch(~c"https://covid19.mathdro.id/api/confirmed")
-
     {:noreply,
      assign(socket,
-       global_stats: global_stats,
-       regional_stats: regional_stats,
+       global_stats: fetch("https://covid19.mathdro.id/api"),
+       regional_stats: fetch("https://covid19.mathdro.id/api/confirmed"),
        loading: false
      )}
   end
@@ -118,7 +114,7 @@ defmodule Covid19Web.CovidLive do
   end
 
   defp fetch(url) do
-    {:ok, {{_, 200, _}, _, body}} = :httpc.request(:get, {url, []}, [], [])
+    {:ok, %{status_code: 200, body: body}} = HTTPoison.get(url)
     # :timer.sleep(1000)
     Jason.decode!(body)
   end
