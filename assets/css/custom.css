@@ -57,7 +57,7 @@ form {
     }
 
     span {
-      @apply block text-5xl leading-none font-extrabold text-indigo-600;
+      @apply block text-5xl leading-none font-extrabold text-green-600;
     }
   }
 }
@@ -66,7 +66,7 @@ table {
   @apply min-w-full text-sm;
 
   th {
-    @apply bg-transparent px-6 py-4 border-b border-gray-300 bg-indigo-700 text-base leading-4 font-medium uppercase tracking-wider text-right text-white;
+    @apply bg-transparent px-6 py-4 border-b border-gray-300 bg-green-700 text-base leading-4 font-medium uppercase tracking-wider text-right text-white;
 
     a {
       @apply no-underline text-white;
@@ -113,7 +113,7 @@ table {
   animation: load7 1.8s infinite ease-in-out;
 }
 .loader {
-  color: #5a67d8;
+  color: #38a169;
   font-size: 10px;
   margin: 20px auto;
   position: relative;
