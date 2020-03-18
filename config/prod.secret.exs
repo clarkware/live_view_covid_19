@@ -28,8 +28,7 @@ config :covid_19, Covid19Web.Endpoint,
     port: String.to_integer(System.get_env("PORT") || "4000"),
     transport_options: [socket_opts: [:inet6]]
   ],
-  secret_key_base: secret_key_base,
-  check_origin: ["//powerful-beautiful-shrike.gigalixirapp.com"]
+  secret_key_base: secret_key_base
 
 # ## Using releases (Elixir v1.9+)
 #
